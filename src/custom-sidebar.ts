@@ -2,16 +2,16 @@ import { ApiInterface, IconInfoInterface, SidebarMenuItemInterface, PoiServiceIn
 
 export class CustomSidebar {
 
-	private step0: any;
-	private step1: any;
-	private step2: any;
-	private step3: any;
-	private step4: any;
-	private step5: any;
-	private step6: any;
-	private step7: any;
-	private step8: any;
-	private step9: any;
+	private step00: any;
+	private step01: any;
+	private step02: any;
+	private step03: any;
+	private step04: any;
+	private step05: any;
+	private step06: any;
+	private step07: any;
+	private step08: any;
+	private step09: any;
 	private step10: any;
 
 	/*** Menu Icons ***/
@@ -114,61 +114,61 @@ export class CustomSidebar {
 	};
 
 	private stepTimer() {
-		this.step0 = setTimeout(() => {
+		this.step00 = setTimeout(() => {
 			this.ivApi.legacyApi.moveToImageId(282, { lon: 2.21, lat: -0.14 }, 115)
 			this.ivApi.legacyApi.getMainView().invalidateScene()
 			this.ivApi.legacyApi.getMainView().currViewingDir
-			console.log("Tour start")
+			console.log("tour start")
 		}, 0);
-		this.step1 = setTimeout(() => {
+		this.step01 = setTimeout(() => {
 			this.ivApi.legacyApi.moveToImageId(704, { lon: 2.98, lat: -0.29 }, 115)
 			this.ivApi.legacyApi.getMainView().invalidateScene()
 			this.ivApi.legacyApi.getMainView().currViewingDir
 			console.log("step 1")
 		}, 10000);
-		this.step2 = setTimeout(() => {
+		this.step02 = setTimeout(() => {
 			this.ivApi.legacyApi.moveToImageId(393, { lon: -3.30, lat: -0.48 }, 115)
 			this.ivApi.legacyApi.getMainView().invalidateScene()
 			this.ivApi.legacyApi.getMainView().currViewingDir
 			console.log("step 2")
 		}, 20000);
-		this.step3 = setTimeout(() => {
+		this.step03 = setTimeout(() => {
 			this.ivApi.legacyApi.moveToImageId(385, { lon: 3.85, lat: -0.06 }, 115)
 			this.ivApi.legacyApi.getMainView().invalidateScene()
 			this.ivApi.legacyApi.getMainView().currViewingDir
 			console.log("step 3")
 		}, 30000);
-		this.step4 = setTimeout(() => {
+		this.step04 = setTimeout(() => {
 			this.ivApi.legacyApi.moveToImageId(428, { lon: 3.69, lat: -0.15 }, 115)
 			this.ivApi.legacyApi.getMainView().invalidateScene()
 			this.ivApi.legacyApi.getMainView().currViewingDir
 			console.log("step 4")
 		}, 40000);
-		this.step5 = setTimeout(() => {
+		this.step05 = setTimeout(() => {
 			this.ivApi.legacyApi.moveToImageId(684, { lon: 4.67, lat: -0.16 }, 115)
 			this.ivApi.legacyApi.getMainView().invalidateScene()
 			this.ivApi.legacyApi.getMainView().currViewingDir
 			console.log("step 5")
 		}, 50000);
-		this.step6 = setTimeout(() => {
+		this.step06 = setTimeout(() => {
 			this.ivApi.legacyApi.moveToImageId(222, { lon: 7.16, lat: -0.21 }, 115)
 			this.ivApi.legacyApi.getMainView().invalidateScene()
 			this.ivApi.legacyApi.getMainView().currViewingDir
 			console.log("step 6")
 		}, 60000);
-		this.step7 = setTimeout(() => {
+		this.step07 = setTimeout(() => {
 			this.ivApi.legacyApi.moveToImageId(479, { lon: -4.90, lat: -0.28 }, 115)
 			this.ivApi.legacyApi.getMainView().invalidateScene()
 			this.ivApi.legacyApi.getMainView().currViewingDir
 			console.log("step 7")
 		}, 70000);
-		this.step8 = setTimeout(() => {
+		this.step08 = setTimeout(() => {
 			this.ivApi.legacyApi.moveToImageId(284, { lon: -3.46, lat: -0.23 }, 115)
 			this.ivApi.legacyApi.getMainView().invalidateScene()
 			this.ivApi.legacyApi.getMainView().currViewingDir
 			console.log("step 8")
 		}, 80000);
-		this.step9 = setTimeout(() => {
+		this.step09 = setTimeout(() => {
 			this.ivApi.legacyApi.moveToImageId(332, { lon: -1.00, lat: -0.22 }, 115)
 			this.ivApi.legacyApi.getMainView().invalidateScene()
 			this.ivApi.legacyApi.getMainView().currViewingDir
@@ -187,17 +187,18 @@ export class CustomSidebar {
 	};
 
 	private stopTour() {
-		clearTimeout(this.step0)
-		clearTimeout(this.step1)
-		clearTimeout(this.step2)
-		clearTimeout(this.step3)
-		clearTimeout(this.step4)
-		clearTimeout(this.step5)
-		clearTimeout(this.step6)
-		clearTimeout(this.step7)
-		clearTimeout(this.step8)
-		clearTimeout(this.step9)
-		clearTimeout(this.step10)
+		clearTimeout(this.step00);
+		clearTimeout(this.step01);
+		clearTimeout(this.step02);
+		clearTimeout(this.step03);
+		clearTimeout(this.step04);
+		clearTimeout(this.step05);
+		clearTimeout(this.step06);
+		clearTimeout(this.step07);
+		clearTimeout(this.step08);
+		clearTimeout(this.step09);
+		clearTimeout(this.step10);
+		console.log("STOP");
 	};
 
 	private startTourMenuIcon: SidebarMenuItemInterface = {
