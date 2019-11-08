@@ -2,7 +2,7 @@ import "./index.scss";
 import { getApi, ApiInterface } from "@navvis/indoorviewer";
 import { CustomSidebar } from "./custom-sidebar";
 import { DisableContextMenu } from "./disable-context-menu";
-import "./poi-locations";
+//import "./poi-locations";
 
 class MetsoTour {
 	public ivApi: ApiInterface;

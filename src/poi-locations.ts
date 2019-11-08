@@ -2,6 +2,9 @@ import { ApiInterface } from "@navvis/indoorviewer";
 
 export class PoiLocations {
 
+    //FIXME:
+    // THIS FILE MIGHT BE USELESS
+
     public poi0() {
         this.ivApi.legacyApi.moveToImageId(282, { lon: 2.21, lat: -0.14 }, 115)
     };
