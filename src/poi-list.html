@@ -4,62 +4,62 @@
             base_url: 'https://demo.esitevr.com/iv.metso.vantaa/'
 
         })
-/*         document.getElementById("poi1").addEventListener("click", () => {
-            console.log("IKONI");
-        });
-        document.getElementById("poi2").addEventListener("click", () => {
-            console.log("IKONI2");
-        });
-        document.getElementById("poi3").addEventListener("click", () => {
-            console.log("IKONI3");
-        }); */
+        /*         document.getElementById("poi1").addEventListener("click", () => {
+                    console.log("IKONI");
+                });
+                document.getElementById("poi2").addEventListener("click", () => {
+                    console.log("IKONI2");
+                });
+                document.getElementById("poi3").addEventListener("click", () => {
+                    console.log("IKONI3");
+                }); */
     })
 </script>
 
 <div class="poi-list">
     <li class="listStart">
-        <a href="http://localhost:8080/?fov=115.0&vlon=2.21&vlat=-0.14&image=282">Start</a>
+        <a onclick="IV.moveToImageId(282, { lon: 2.21, lat: -0.14 }, 115)">Start</a>
     </li>
     <ol>
         <li>
-            <a href="http://localhost:8080/?fov=115.0&vlon=2.98&vlat=-0.29&image=704">NDX- 360 assembly</a>
+            <a onclick="IV.moveToImageId(704, { lon: 2.98, lat: -0.29 }, 115)">NDX- 360 assembly</a>
             <i id="poi01" onclick="IV.moveToPoiId(12)" class="material-icons green">info</i>
         </li>
         <li>
-            <a href="http://localhost:8080/?fov=115.0&vlon=-3.30&vlat=-0.48&image=393">Cavitation demo</a>
+            <a onclick="IV.moveToImageId(393, { lon: -3.30, lat: -0.48 }, 115)">Cavitation demo</a>
             <i id="poi02" onclick="IV.moveToPoiId(7)" class="material-icons green">info</i>
         </li>
         <li>
-            <a href="http://localhost:8080/?fov=115.0&vlon=3.85&vlat=0.06&image=385">CV-measuring</a>
+            <a onclick="IV.moveToImageId(385, { lon: 3.85, lat: -0.06 }, 115)">CV-measuring</a>
             <i id="poi03" onclick="IV.moveToPoiId(8)" class="material-icons green">info</i>
         </li>
         <li>
-            <a href="http://localhost:8080/?fov=115.0&vlon=3.69&vlat=0.15&image=428">Noice measurement</a>
+            <a onclick="IV.moveToImageId(428, { lon: 3.69, lat: -0.15 }, 115)">Noice measurement</a>
             <i id="poi04" onclick="IV.moveToPoiId(9)" class="material-icons green">info</i>
         </li>
         <li>
-            <a href="http://localhost:8080/?fov=115.0&vlon=4.67&vlat=-0.16&image=684">Burn testing</a>
+            <a onclick="IV.moveToImageId(684, { lon: 4.67, lat: -0.16 }, 115)">Burn testing</a>
             <i id="poi05" onclick="IV.moveToPoiId(10)" class="material-icons green">info</i>
         </li>
         <li>
-            <a href="http://localhost:8080/?fov=115.0&vlon=7.16&vlat=-0.21&image=222">Spare parts service</a>
+            <a onclick="IV.moveToImageId(222, { lon: 7.16, lat: -0.21 }, 115)">Spare parts service</a>
             <i id="poi06" onclick="IV.moveToPoiId(13)" class="material-icons green">info</i>
         </li>
         <li>
-            <a href="http://localhost:8080/?fov=115.0&vlon=-4.90&vlat=-0.28&image=479">Production valve emission
+            <a onclick="IV.moveToImageId(479, { lon: -4.90, lat: -0.28 }, 115)">Production valve emission
                 testing</a>
             <i id="poi07" onclick="IV.moveToPoiId(16)" class="material-icons green">info</i>
         </li>
         <li>
-            <a href="http://localhost:8080/?fov=115.0&vlon=-3.46&vlat=-0.23&image=284">Mobile measuring</a>
+            <a onclick="IV.moveToImageId(284, { lon: -3.46, lat: -0.23 }, 115)">Mobile measuring</a>
             <i id="poi08" onclick="IV.moveToPoiId(11)" class="material-icons green">info</i>
         </li>
         <li>
-            <a href="http://localhost:8080/?fov=115.0&vlon=-1.00&vlat=-0.22&image=332">Cryo</a>
+            <a onclick="IV.moveToImageId(332, { lon: -1.00, lat: -0.22 }, 115)">Cryo</a>
             <i id="poi09" onclick="IV.moveToPoiId(5)" class="material-icons green">info</i>
         </li>
         <li>
-            <a href="http://localhost:8080/?fov=115.0&vlon=1.52&vlat=-0.64&image=43">3D printing</a>
+            <a onclick="IV.moveToImageId(43, { lon: 1.52, lat: -0.64 }, 115)">3D printing</a>
             <i id="poi10" onclick="IV.moveToPoiId(18)" class="material-icons green">info</i>
         </li>
     </ol>
