@@ -11,7 +11,7 @@ export class PoiLocations {
     };
 
     public firstStep() {
-        document.getElementById('poi1').addEventListener('click', (e: Event) => { this.poi1() });
+        document.getElementById('poi1').addEventListener('onclick', (e: Event) => { return this.poi1() });
         console.log("PAINALLUS", event)
     };
 
@@ -52,7 +52,7 @@ export class PoiLocations {
     };
 
     constructor(private ivApi: ApiInterface) {
-        window.onload = () => {
+        onload = () => {
             this.firstStep();
             /* document.getElementById('poi1').addEventListener('click', () => { this.poi1() });
             document.getElementById('poi2').addEventListener('click', () => { this.poi2() });
