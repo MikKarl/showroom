@@ -22,7 +22,7 @@ class MetsoTour {
 				//const poiLocations = new PoiLocations(iv);
 				//console.log(poiLocations);
 			});
-	}
-}
+	};
+};
 
 (<any>window).MetsoTour = new MetsoTour();

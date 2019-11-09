@@ -68,5 +68,5 @@ export class PoiLocations {
             document.getElementById('poi9').addEventListener('click', () => { this.poi9() });
             document.getElementById('poi10').addEventListener('click', () => { this.poi10() }); */
         };
-    }
-} 
+    };
+};

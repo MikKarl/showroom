@@ -2,6 +2,8 @@ import { ApiInterface, IconInfoInterface, SidebarMenuItemInterface, PoiServiceIn
 
 export class CustomSidebar {
 
+	/*** onClick callback functions ***/
+
 	private step00: any;
 	private step01: any;
 	private step02: any;
@@ -14,74 +16,7 @@ export class CustomSidebar {
 	private step09: any;
 	private step10: any;
 
-	/*** Menu Icons ***/
-
-	private poiIcon: IconInfoInterface = {
-		className: "material-icons",
-		ligature: "list",
-		path: ""
-	};
-
-	private infoIcon: IconInfoInterface = {
-		className: "material-icons",
-		ligature: "info",
-		path: ""
-	};
-
-	private mapIcon: IconInfoInterface = {
-		className: "material-icons",
-		ligature: "map",
-		path: ""
-	};
-
-	private firstPoiIcon: IconInfoInterface = {
-		className: "material-icons",
-		ligature: "home",
-		path: ""
-	};
-
-	private startTourIcon: IconInfoInterface = {
-		className: "material-icons",
-		ligature: "play_arrow",
-		path: ""
-	};
-
-	private pauseTourIcon: IconInfoInterface = {
-		className: "material-icons",
-		ligature: "pause",
-		path: ""
-	};
-
-	private stopTourIcon: IconInfoInterface = {
-		className: "material-icons",
-		ligature: "stop",
-		path: ""
-	};
-
-	/*** Menu Items ***/
-
-	private poiList: SidebarMenuItemInterface = {
-		title: "Point of interests",
-		icon: this.poiIcon,
-		isPreviewIconVisible: () => true,
-		isVisible: () => true,
-		onClick: () => { },
-		template: "./poi-list.html",
-		items: [],
-		isFullscreen: false
-	};
-
 	private showInfo() {
-	};
-
-	private infoMenuIcon: SidebarMenuItemInterface = {
-		title: "Info",
-		icon: this.infoIcon,
-		isPreviewIconVisible: () => true,
-		isVisible: () => true,
-		items: [],
-		onClick: () => { this.showInfo(); },
-		isFullscreen: false
 	};
 
 	private showMap() {
@@ -89,28 +24,12 @@ export class CustomSidebar {
 		console.log("kartta")
 	};
 
-	private mapMenuIcon: SidebarMenuItemInterface = {
-		title: "Map",
-		icon: this.mapIcon,
-		isPreviewIconVisible: () => true,
-		isVisible: () => true,
-		onClick: () => { this.showMap(); },
-		items: [],
-		isFullscreen: false
-	};
-
 	private toStart() {
 		this.ivApi.legacyApi.moveToImageId(282, { lon: 2.21, lat: -0.14 }, 115)
 	};
 
-	private firstPoiMenuIcon: SidebarMenuItemInterface = {
-		title: "To Start",
-		icon: this.firstPoiIcon,
-		isPreviewIconVisible: () => true,
-		isVisible: () => true,
-		onClick: () => { this.toStart(); },
-		items: [],
-		isFullscreen: false
+	private startTour() {
+		this.stepTimer()
 	};
 
 	private stepTimer() {
@@ -182,10 +101,6 @@ export class CustomSidebar {
 		}, 100000);
 	};
 
-	private startTour() {
-		this.stepTimer()
-	};
-
 	private stopTour() {
 		clearTimeout(this.step00);
 		clearTimeout(this.step01);
@@ -199,6 +114,62 @@ export class CustomSidebar {
 		clearTimeout(this.step09);
 		clearTimeout(this.step10);
 		console.log("STOP");
+	};
+
+	/*** Menu Icons ***/
+
+	private poiListIcon: IconInfoInterface = {
+		className: "material-icons",
+		ligature: "list",
+		path: ""
+	};
+
+	private infoIcon: IconInfoInterface = {
+		className: "material-icons",
+		ligature: "info",
+		path: ""
+	};
+
+	private mapIcon: IconInfoInterface = {
+		className: "material-icons",
+		ligature: "map",
+		path: ""
+	};
+
+	private firstPoiIcon: IconInfoInterface = {
+		className: "material-icons",
+		ligature: "home",
+		path: ""
+	};
+
+	private startTourIcon: IconInfoInterface = {
+		className: "material-icons",
+		ligature: "play_arrow",
+		path: ""
+	};
+
+	private pauseTourIcon: IconInfoInterface = {
+		className: "material-icons",
+		ligature: "pause",
+		path: ""
+	};
+
+	private stopTourIcon: IconInfoInterface = {
+		className: "material-icons",
+		ligature: "stop",
+		path: ""
+	};
+
+	/*** Menu Items ***/
+
+	private firstPoiMenuIcon: SidebarMenuItemInterface = {
+		title: "To Start",
+		icon: this.firstPoiIcon,
+		isPreviewIconVisible: () => true,
+		isVisible: () => true,
+		onClick: () => { this.toStart(); },
+		items: [],
+		isFullscreen: false
 	};
 
 	private startTourMenuIcon: SidebarMenuItemInterface = {
@@ -221,8 +192,49 @@ export class CustomSidebar {
 		isFullscreen: false
 	};
 
+	private pauseTourMenuIcon: SidebarMenuItemInterface = {
+		title: "Pause Tour",
+		icon: this.pauseTourIcon,
+		isPreviewIconVisible: () => true,
+		isVisible: () => true,
+		onClick: () => { },
+		items: [],
+		isFullscreen: false
+	};
+
+	private poiListMenuIcon: SidebarMenuItemInterface = {
+		title: "Point of interests",
+		icon: this.poiListIcon,
+		isPreviewIconVisible: () => true,
+		isVisible: () => true,
+		onClick: () => { },
+		template: "./poi-list.html",
+		items: [],
+		isFullscreen: false
+	};
+
+	private infoMenuIcon: SidebarMenuItemInterface = {
+		title: "Info",
+		icon: this.infoIcon,
+		isPreviewIconVisible: () => true,
+		isVisible: () => true,
+		items: [],
+		onClick: () => { this.showInfo(); },
+		isFullscreen: false
+	};
+
+	private mapMenuIcon: SidebarMenuItemInterface = {
+		title: "Map",
+		icon: this.mapIcon,
+		isPreviewIconVisible: () => true,
+		isVisible: () => true,
+		onClick: () => { this.showMap(); },
+		items: [],
+		isFullscreen: false
+	};
+
 	constructor(private ivApi: ApiInterface) {
 		const menuItems = this.ivApi.ui.sidebarMenuService.items;
-		menuItems.splice(1, menuItems.length, this.firstPoiMenuIcon, this.startTourMenuIcon, this.stopTourMenuIcon, this.poiList/* , this.mapMenuIcon, this.infoMenuIcon */);
-	}
-}
+		menuItems.splice(1, menuItems.length, this.firstPoiMenuIcon, this.startTourMenuIcon, this.pauseTourMenuIcon, this.stopTourMenuIcon, this.poiListMenuIcon/* , this.mapMenuIcon, this.infoMenuIcon */);
+	};
+};
