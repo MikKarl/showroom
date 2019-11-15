@@ -1,4 +1,4 @@
-#Project repo for Metropolia UAS cource
+# Project repo for Metropolia UAS cource
 
 ## How to install and run the project
 
