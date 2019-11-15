@@ -20,4 +20,5 @@ npm run serve
 ~~~
 
 * project should open automatically in a default browser
+
 NOTE: instance will ask you to sign in
