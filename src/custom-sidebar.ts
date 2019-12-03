@@ -165,12 +165,6 @@ export class CustomSidebar {
 
 	// };
 
-
-
-
-
-
-
 	private _pauseTour() {
 
 	};
@@ -294,6 +288,6 @@ export class CustomSidebar {
 
 	constructor(private _ivApi: ApiInterface) {
 		const menuItems = this._ivApi.ui.sidebarMenuService.items;
-		menuItems.splice(1, menuItems.length, this._firstPoiMenuIcon, this._startTourMenuIcon, this._pauseTourMenuIcon, this._stopTourMenuIcon, this._poiListMenuIcon/* , this._mapMenuIcon *//* , this._infoMenuIcon */);
+		menuItems.splice(1, menuItems.length, this._firstPoiMenuIcon, this._startTourMenuIcon, /* this._pauseTourMenuIcon, */ this._stopTourMenuIcon, this._poiListMenuIcon/* , this._mapMenuIcon *//* , this._infoMenuIcon */);
 	};
 };

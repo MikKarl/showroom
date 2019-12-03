@@ -20,10 +20,21 @@ body {
     > i.material-icons:hover {
     color: rgb(252, 144, 0);
   }
+
+  .menu-close-button {
+    width: 50px;
+    height: 50px;
+  }
+
+  .vertical-menu .vertical-menu-heading > h3 {
+    font-size: 25px;
+    font-family: Myriad;
+  }
 }
 
 indoorviewer {
   height: 100vh;
+  font-family: Myriad;
 }
 
 navbar-menu .navbar-default .navbar-custom > li.navbar-menu-item-sidebar {
@@ -32,7 +43,7 @@ navbar-menu .navbar-default .navbar-custom > li.navbar-menu-item-sidebar {
 
 /*---- POI-VIEW ----  */
 
-site-data>div {
+site-data > div {
   visibility: hidden;
   height: 0;
 }
@@ -87,6 +98,10 @@ li {
 
 .listStart {
   padding-left: 20px;
+}
+
+sidebar-menu > .vertical-menu > .vertical-menu-heading .back-button {
+  visibility: hidden;
 }
 
 /* ----------------- */
