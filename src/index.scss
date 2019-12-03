@@ -37,6 +37,15 @@ indoorviewer {
   font-family: Myriad;
 }
 
+// sidebar-menu-items-collection.parent,
+// sidebar-menu-items-collection.parent > .panel-autoscroll,
+// sidebar-menu-items-collection.parent
+//   > .panel-autoscroll
+//   > .sidebar-menu-template,
+// sidebar-menu-items-collection.parent > .panel-autoscroll > ul {
+//   background-color: rgb(237, 238, 239);
+// }
+
 navbar-menu .navbar-default .navbar-custom > li.navbar-menu-item-sidebar {
   visibility: hidden;
 }
@@ -103,5 +112,4 @@ li {
 sidebar-menu > .vertical-menu > .vertical-menu-heading .back-button {
   visibility: hidden;
 }
-
 /* ----------------- */
