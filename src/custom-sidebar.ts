@@ -32,6 +32,7 @@ export class CustomSidebar {
 	};
 
 	private _stepTimer() {
+		// this._ivApi.poi.service.onPoiClose.connect(this._stopTour);
 		this._step00 = setTimeout(() => {
 			this._ivApi.legacyApi.moveToImageId(282, { lon: 2.21, lat: -0.14 }, 115)
 			this._ivApi.legacyApi.getMainView().invalidateScene()
@@ -98,7 +99,6 @@ export class CustomSidebar {
 			this._ivApi.legacyApi.getMainView().currViewingDir
 			console.log("step 10")
 		}, 100000);
-		// this._ivApi.poi.service.onPoiOpen.connect(this._stopTour);
 	};
 
 	private _stopTour() {

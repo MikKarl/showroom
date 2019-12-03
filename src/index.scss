@@ -30,6 +30,12 @@ body {
     font-size: 25px;
     font-family: Myriad;
   }
+
+  .panel-heading h3 {
+    font-size: 1.6em;
+    padding-top: 5px;
+    font-family: Myriad;
+  }
 }
 
 indoorviewer {
@@ -56,6 +62,8 @@ site-data > div {
   visibility: hidden;
   height: 0;
 }
+
+
 
 .panel .menu-close-button {
   position: initial;
