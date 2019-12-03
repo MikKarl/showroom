@@ -1,4 +1,4 @@
-import { ApiInterface, IconInfoInterface, SidebarMenuItemInterface, PoiServiceInterface, PoiClickHandler, PoiOpenHandler } from "@navvis/indoorviewer";
+import { ApiInterface, IconInfoInterface, SidebarMenuItemInterface, PoiServiceInterface, PoiClickHandler, PoiOpenHandler, MapViewInterface } from "@navvis/indoorviewer";
 
 export class CustomSidebar {
 
@@ -20,7 +20,6 @@ export class CustomSidebar {
 	};
 
 	private _showMap() {
-		this._ivApi.legacyApi.getMapView().scene
 		console.log("kartta")
 	};
 
@@ -99,11 +98,12 @@ export class CustomSidebar {
 			this._ivApi.legacyApi.getMainView().currViewingDir
 			console.log("step 10")
 		}, 100000);
+		// this._ivApi.poi.service.onPoiOpen.connect(this._stopTour);
 	};
 
 	private _stopTour() {
-		clearTimeout(this._step01);
 		clearTimeout(this._step00);
+		clearTimeout(this._step01);
 		clearTimeout(this._step02);
 		clearTimeout(this._step03);
 		clearTimeout(this._step04);
@@ -165,7 +165,7 @@ export class CustomSidebar {
 
 	// };
 
-	
+
 
 
 
@@ -289,11 +289,11 @@ export class CustomSidebar {
 		isVisible: () => true,
 		onClick: () => { this._showMap(); },
 		items: [],
-		isFullscreen: false
+		isFullscreen: false,
 	};
 
 	constructor(private _ivApi: ApiInterface) {
 		const menuItems = this._ivApi.ui.sidebarMenuService.items;
-		menuItems.splice(1, menuItems.length, this._firstPoiMenuIcon, this._startTourMenuIcon, this._pauseTourMenuIcon, this._stopTourMenuIcon, this._poiListMenuIcon, this._infoMenuIcon /* , this._mapMenuIcon, this._infoMenuIcon */);
+		menuItems.splice(1, menuItems.length, this._firstPoiMenuIcon, this._startTourMenuIcon, this._pauseTourMenuIcon, this._stopTourMenuIcon, this._poiListMenuIcon/* , this._mapMenuIcon *//* , this._infoMenuIcon */);
 	};
 };

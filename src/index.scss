@@ -1,10 +1,56 @@
 body {
   margin: 0;
+
+  sidebar-preview-menu
+    > .vertical-menu
+    sidebar-menu-items-collection
+    sidebar-menu-item
+    > li
+    icon
+    > i.material-icons {
+    font-size: 25px;
+  }
+
+  sidebar-preview-menu
+    > .vertical-menu
+    sidebar-menu-items-collection
+    sidebar-menu-item
+    > li
+    icon
+    > i.material-icons:hover {
+    color: rgb(252, 144, 0);
+  }
 }
 
 indoorviewer {
   height: 100vh;
 }
+
+navbar-menu .navbar-default .navbar-custom > li.navbar-menu-item-sidebar {
+  visibility: hidden;
+}
+
+/*---- POI-VIEW ----  */
+
+site-data>div {
+  visibility: hidden;
+  height: 0;
+}
+
+.panel .menu-close-button {
+  position: initial;
+  width: 50px;
+  height: 50px;
+  // width: 55px;
+  // height: 55px;
+}
+
+.poi-btn-toolbar {
+  height: 0;
+  visibility: hidden;
+}
+
+/* ----------------- */
 
 /*---- POI-LIST ----*/
 
