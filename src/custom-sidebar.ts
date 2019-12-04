@@ -256,7 +256,7 @@ export class CustomSidebar {
 	};
 
 	private _poiListMenuIcon: SidebarMenuItemInterface = {
-		title: "Point of interests",
+		title: "Points of interest",
 		icon: this._poiListIcon,
 		isPreviewIconVisible: () => true,
 		isVisible: () => true,
