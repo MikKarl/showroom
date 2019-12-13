@@ -1,6 +1,7 @@
 body {
   margin: 0;
 
+  /* size of the menu icons */
   sidebar-preview-menu
     > .vertical-menu
     sidebar-menu-items-collection
@@ -11,6 +12,7 @@ body {
     font-size: 25px;
   }
 
+  /* hover on the menu icon buttons */
   sidebar-preview-menu
     > .vertical-menu
     sidebar-menu-items-collection
@@ -21,6 +23,7 @@ body {
     color: rgb(252, 144, 0);
   }
 
+  /* size of the close button */
   .menu-close-button {
     width: 50px;
     height: 50px;
@@ -43,18 +46,11 @@ indoorviewer {
   font-family: Myriad;
 }
 
-// sidebar-menu-items-collection.parent,
-// sidebar-menu-items-collection.parent > .panel-autoscroll,
-// sidebar-menu-items-collection.parent
-//   > .panel-autoscroll
-//   > .sidebar-menu-template,
-// sidebar-menu-items-collection.parent > .panel-autoscroll > ul {
-//   background-color: rgb(237, 238, 239);
-// }
-
+/* hide the tree line menu item thing */
 navbar-menu .navbar-default .navbar-custom > li.navbar-menu-item-sidebar {
   visibility: hidden;
 }
+
 
 /*---- POI-VIEW ----  */
 
@@ -63,22 +59,18 @@ site-data > div {
   height: 0;
 }
 
-
-
 .panel .menu-close-button {
   position: initial;
   width: 50px;
   height: 50px;
-  // width: 55px;
-  // height: 55px;
 }
 
+/* hides the edit funtion on open POI */
 .poi-btn-toolbar {
   height: 0;
   visibility: hidden;
 }
 
-/* ----------------- */
 
 /*---- POI-LIST ----*/
 
@@ -94,7 +86,6 @@ li {
 
   a {
     color: black;
-    // rgb(0, 94, 87);
   }
 
   a:hover {
@@ -117,7 +108,7 @@ li {
   padding-left: 20px;
 }
 
+/* hides "back" button on open menu */
 sidebar-menu > .vertical-menu > .vertical-menu-heading .back-button {
   visibility: hidden;
 }
-/* ----------------- */

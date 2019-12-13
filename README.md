@@ -2,7 +2,7 @@
 
 ## 1. Purpose of the project
 
-Purpose of the project was to create AR application that enables customer to give tour of their factory without usual costs in time and money. For instance, usually factory tours require participating individuals to atleast travel to factory and go through savety training. This application removes the need for those.
+Purpose of the project was to create AR application that enables customer to give tour of their facility without usual costs in time and money. For instance, usually some facility tours, like factory tours, require participating individuals to atleast travel to the facility and go through savety training. This application removes the need for those.
 
 ## 2. Development of the application
 
@@ -12,7 +12,7 @@ Application was developed by basing solution on customer requirements and user f
 
 * NavVis IndoorViewer platform 
     * AngularJs
-    * JQuery
+    * jQuery
 * Typescript
 * Javascript
 * HTML
@@ -54,7 +54,7 @@ NOTE: instance will ask you to sign in
 
 Application works similarly to the Google Street View, user can move around the enviroment at their own leisure. 
 
-Most of the application funtionalities are focused on the left side of the screen. Screen has (currently) four buttons
+Most of the applications funtionalities are focused on the left side of the screen. Screen has (currently) four buttons
 
 * HOME
     * brings user to the starting position of the tour

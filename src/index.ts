@@ -2,11 +2,9 @@ import "./index.scss";
 import { getApi, ApiInterface } from "@navvis/indoorviewer";
 import { CustomSidebar } from "./custom-sidebar";
 import { DisableContextMenu } from "./disable-context-menu";
-//import { PoiLocations } from "./poi-locations";
 
 class MetsoTour {
 	public ivApi: ApiInterface;
-	//public loc: PoiLocations;
 
 	constructor() {
 
@@ -17,9 +15,6 @@ class MetsoTour {
 				new DisableContextMenu(this.ivApi.view.mainView);
 				const modifier = new CustomSidebar(iv);
 				console.log(modifier);
-
-				//const poiLocations = new PoiLocations(iv);
-				//console.log(poiLocations);
 			});
 	};
 };

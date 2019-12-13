@@ -23,29 +23,21 @@ export class CustomSidebar {
 		// this._ivApi.legacyApi.getMapView().addToScene
 		// this._ivApi.legacyApi.getMapView().active = true
 		// this._ivApi.legacyApi.getMainView().invalidateScene()
-		// console.log("kartta")
 	};
 
+	/* Move to the starting location */
 	private _toStart() {
 		this._ivApi.legacyApi.moveToImageId(282, { lon: 2.21, lat: -0.14 }, 115)
 	};
 
+	/* start tour */
 	private _startTour() {
 		this._stepTimer()
 	};
 
-
-	private _stopComment() {
-		console.log("STOP STOP")
-	};
-
-	private _stopOnPoi() {
-		this._ivApi.poi.service.onPoiClose.connect(this._stopTour);
-	}
-
+	/* POI locations and delay for automated tour */
 	private _stepTimer() {
-		// this._ivApi.poi.service.onPoiClose.connect(this._stopTour);
-		// this._stopOnPoi();
+		// this._ivApi.poi.service.onPoiOpen.connect(this._stopTour);
 		this._step00 = setTimeout(() => {
 			this._ivApi.legacyApi.moveToImageId(282, { lon: 2.21, lat: -0.14 }, 115)
 			this._ivApi.legacyApi.getMainView().invalidateScene()
@@ -112,88 +104,9 @@ export class CustomSidebar {
 			this._ivApi.legacyApi.getMainView().currViewingDir
 			console.log("step 10")
 		}, 100000);
-
-
-
-		// this._step00 = setInterval(() => {
-		// 	this._ivApi.legacyApi.moveToImageId(282, { lon: 2.21, lat: -0.14 }, 115)
-		// 	this._ivApi.legacyApi.getMainView().invalidateScene()
-		// 	this._ivApi.legacyApi.getMainView().currViewingDir
-		// 	console.log("tour start")
-		// 	clearInterval(this._step00)
-		// }, 0);
-		// this._step01 = setInterval(() => {
-		// 	this._ivApi.legacyApi.moveToImageId(704, { lon: 2.98, lat: -0.29 }, 115)
-		// 	this._ivApi.legacyApi.getMainView().invalidateScene()
-		// 	this._ivApi.legacyApi.getMainView().currViewingDir
-		// 	console.log("step 1")
-		// 	clearInterval(this._step01)
-		// }, 10000);
-		// this._step02 = setInterval(() => {
-		// 	this._ivApi.legacyApi.moveToImageId(393, { lon: -3.30, lat: -0.48 }, 115)
-		// 	this._ivApi.legacyApi.getMainView().invalidateScene()
-		// 	this._ivApi.legacyApi.getMainView().currViewingDir
-		// 	console.log("step 2")
-		// 	clearInterval(this._step02)
-		// }, 20000);
-		// this._step03 = setInterval(() => {
-		// 	this._ivApi.legacyApi.moveToImageId(385, { lon: 3.85, lat: -0.06 }, 115)
-		// 	this._ivApi.legacyApi.getMainView().invalidateScene()
-		// 	this._ivApi.legacyApi.getMainView().currViewingDir
-		// 	console.log("step 3")
-		// 	clearInterval(this._step03)
-		// }, 30000);
-		// this._step04 = setInterval(() => {
-		// 	this._ivApi.legacyApi.moveToImageId(428, { lon: 3.69, lat: -0.15 }, 115)
-		// 	this._ivApi.legacyApi.getMainView().invalidateScene()
-		// 	this._ivApi.legacyApi.getMainView().currViewingDir
-		// 	console.log("step 4")
-		// 	clearInterval(this._step04)
-		// }, 40000);
-		// this._step05 = setInterval(() => {
-		// 	this._ivApi.legacyApi.moveToImageId(684, { lon: 4.67, lat: -0.16 }, 115)
-		// 	this._ivApi.legacyApi.getMainView().invalidateScene()
-		// 	this._ivApi.legacyApi.getMainView().currViewingDir
-		// 	console.log("step 5")
-		// 	clearInterval(this._step05)
-		// }, 50000);
-		// this._step06 = setInterval(() => {
-		// 	this._ivApi.legacyApi.moveToImageId(222, { lon: 7.16, lat: -0.21 }, 115)
-		// 	this._ivApi.legacyApi.getMainView().invalidateScene()
-		// 	this._ivApi.legacyApi.getMainView().currViewingDir
-		// 	console.log("step 6")
-		// 	clearInterval(this._step06)
-		// }, 60000);
-		// this._step07 = setInterval(() => {
-		// 	this._ivApi.legacyApi.moveToImageId(479, { lon: -4.90, lat: -0.28 }, 115)
-		// 	this._ivApi.legacyApi.getMainView().invalidateScene()
-		// 	this._ivApi.legacyApi.getMainView().currViewingDir
-		// 	console.log("step 7")
-		// 	clearInterval(this._step07)
-		// }, 70000);
-		// this._step08 = setInterval(() => {
-		// 	this._ivApi.legacyApi.moveToImageId(284, { lon: -3.46, lat: -0.23 }, 115)
-		// 	this._ivApi.legacyApi.getMainView().invalidateScene()
-		// 	this._ivApi.legacyApi.getMainView().currViewingDir
-		// 	console.log("step 8")
-		// 	clearInterval(this._step08)
-		// }, 80000);
-		// this._step09 = setInterval(() => {
-		// 	this._ivApi.legacyApi.moveToImageId(332, { lon: -1.00, lat: -0.22 }, 115)
-		// 	this._ivApi.legacyApi.getMainView().invalidateScene()
-		// 	this._ivApi.legacyApi.getMainView().currViewingDir
-		// 	console.log("step 9")
-		// 	clearInterval(this._step09)
-		// }, 90000);
-		// this._step10 = setInterval(() => {
-		// 	this._ivApi.legacyApi.moveToImageId(43, { lon: 1.52, lat: -0.64 }, 115)
-		// 	this._ivApi.legacyApi.getMainView().invalidateScene()
-		// 	this._ivApi.legacyApi.getMainView().currViewingDir
-		// 	console.log("step 10")
-		// 	clearInterval(this._step10)
-		// }, 100000);
 	};
 
+	/* stop tour */
 	private _stopTour() {
 		clearTimeout(this._step00);
 		clearTimeout(this._step01);
@@ -206,99 +119,11 @@ export class CustomSidebar {
 		clearTimeout(this._step08);
 		clearTimeout(this._step09);
 		clearTimeout(this._step10);
-
-		// clearInterval(this._step00);
-		// clearInterval(this._step01);
-		// clearInterval(this._step02);
-		// clearInterval(this._step03);
-		// clearInterval(this._step04);
-		// clearInterval(this._step05);
-		// clearInterval(this._step06);
-		// clearInterval(this._step07);
-		// clearInterval(this._step08);
-		// clearInterval(this._step09);
-		// clearInterval(this._step10);
-
 		console.log("STOP");
 	};
 
-	// t: any;
-	// startTimeout = +new Date();
-	// timeLeft = 0;
-	// timeDelay = 10000;
-
-	// private _startTimer() {
-	// 	this.startTimeout = +new Date();
-	// 	this.t = setTimeout(this._startTimer, this.timeDelay)
-	// 	console.log("START")
-	// }
-
-	// private _pauseTimeout() {
-	// 	this.timeLeft = this.timeDelay;
-	// 	this.timeLeft -= +new Date() - this.startTimeout;
-	// 	clearTimeout(this.t)
-	// 	console.log("PAUSE")
-	// }
-
-	// private _resumeTimeout() {
-	// 	if (!this.timeLeft) {
-	// 		this.timeLeft = this.timeDelay
-	// 	}
-	// 	this.t = setTimeout( () => this.timeLeft)
-	// 	console.log("RESUME")
-	// }
-
-	// private _timerId: any;
-	// private _start: number;
-	// private _remaining: number;
-
-	// private _pause(delay: any) {
-	// 	clearTimeout(this._timerId);
-	// 	this._remaining = delay;
-	// 	this._remaining -= +new Date() - this._start;
-	// };
-
-	// private _resume = (callback: any, delay: any) => {
-	// 	this._start = +new Date();
-	// 	this._timerId = setTimeout(() => {
-	// 		this._remaining = delay;
-	// 		this._resume;
-	// 		callback();
-	// 	}, this._remaining);
-	// };
-
-	// private _timer() {
-
-	// };
-
-	// private currentTime: any = Date.now()
-	// private start: any
-	// private timerId: any
-	// private remaining: any
-	// private pause = this.remaining -= this.currentTime
-
 	private _pauseTour() {
-
-		// clearTimeout(this._step00)
-		// clearTimeout(this._step01);
-		// clearTimeout(this._step02);
-		// clearTimeout(this._step03);
-		// clearTimeout(this._step04);
-		// clearTimeout(this._step05);
-		// clearTimeout(this._step06);
-		// clearTimeout(this._step07);
-		// clearTimeout(this._step08);
-		// clearTimeout(this._step09);
-		// clearTimeout(this._step10);
-		// this.pause
-		// console.log(this.pause)
 	};
-
-	// private _resumeTour() {
-	// 	this.start = this.currentTime
-	// 	clearTimeout(this.timerId)
-	// 	this.timerId = setTimeout(this.remaining)
-	// }
 
 	/*** Menu Icons ***/
 
@@ -420,6 +245,8 @@ export class CustomSidebar {
 
 	constructor(private _ivApi: ApiInterface) {
 		const menuItems = this._ivApi.ui.sidebarMenuService.items;
-		menuItems.splice(1, menuItems.length, this._firstPoiMenuIcon, this._startTourMenuIcon, /* this._pauseTourMenuIcon, */ this._stopTourMenuIcon, this._poiListMenuIcon);
+		
+		/* hide default menu icons and display custom ones */
+		menuItems.splice(1, menuItems.length, this._firstPoiMenuIcon, this._startTourMenuIcon, this._stopTourMenuIcon, this._poiListMenuIcon);
 	};
 };
